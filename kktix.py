@@ -4,7 +4,8 @@ import requests
 from datetime import datetime
 
 URL = "https://kktix.com/events/akiba1/registrations/new"
-DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1500080994747682947/RM8tlYJxL8yc6ttrlFlvMUfrwIV3bsWLpVvTb7uBEWPoWj3Hi31oqN8eoLbVJfORJRc0"
+import os
+DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")
 
 def send_discord(msg):
     try:
